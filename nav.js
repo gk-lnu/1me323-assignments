@@ -15,6 +15,11 @@ export function createNav() {
     homeA.href = 'index.html';
   }
   homeA.textContent = 'Hem';
+  
+  if (!isSubpage) {
+    homeA.classList.add('active');
+  }
+  
   homeLi.append(homeA);
   ul.append(homeLi);
   
@@ -27,6 +32,11 @@ export function createNav() {
       a.href = assignment.link;
     }
     a.textContent = assignment.title;
+    
+    if (path.includes(assignment.id)) {
+      a.classList.add('active');
+    }
+    
     li.append(a);
     ul.append(li);
   }
