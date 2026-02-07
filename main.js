@@ -1,4 +1,5 @@
 import { assignments } from './assignments.js';
+import { createNav } from './nav.js';
 
 function createCard(assignment) {
   const div = document.createElement('div');
@@ -17,6 +18,9 @@ function createCard(assignment) {
   div.append(h3, p, a);
   return div;
 }
+
+const header = document.querySelector('header');
+header.append(createNav());
 
 const container = document.getElementById('cards');
 
