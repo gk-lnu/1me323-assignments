@@ -2,8 +2,8 @@ import { assignments } from './assignments.js';
 import { createNav } from './nav.js';
 
 function createCard(assignment) {
-  const div = document.createElement('div');
-  div.classList.add('card');
+  const article = document.createElement('article');
+  article.classList.add('card');
   
   const h3 = document.createElement('h3');
   h3.textContent = assignment.title;
@@ -13,18 +13,21 @@ function createCard(assignment) {
   
   const a = document.createElement('a');
   a.href = assignment.link;
-  a.textContent = 'Öppna';
+  a.textContent = 'Gå till uppgift';
   
-  div.append(h3, p, a);
-  return div;
+  article.append(h3, p, a);
+  return article;
+}
+
+function renderCards() {
+  const container = document.getElementById('cards');
+  for (const assignment of assignments) {
+    const card = createCard(assignment);
+    container.append(card);
+  }
 }
 
 const header = document.querySelector('header');
 header.append(createNav());
 
-const container = document.getElementById('cards');
-
-for (const a of assignments) {
-  const card = createCard(a);
-  container.append(card);
-}
+renderCards();
