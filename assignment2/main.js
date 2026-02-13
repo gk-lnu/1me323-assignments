@@ -14,7 +14,7 @@ function renderProducts() {
         <h3>${product.name}</h3>
         <p class="desc">${product.description}</p>
         <p class="price">${product.price} kr</p>
-        <button class="add-btn">Lägg i kundvagn</button>
+        <button class="add-btn" data-id="${product.id}">Lägg i kundvagn</button>
       </article>
     `;
   }
