@@ -64,5 +64,12 @@ function renderCart() {
   totalEl.textContent = sum + ' kr';
 }
 
+function clearCart() {
+  cart = [];
+  renderCart();
+}
+
+document.getElementById('clear-btn').addEventListener('click', clearCart);
+
 renderProducts();
 renderCart();
