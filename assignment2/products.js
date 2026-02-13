@@ -54,5 +54,13 @@ export const products = [
     price: 8799,
     image: "images/camera.png",
     category: "Foto"
+  },
+  {
+    id: 8,
+    name: "Powerbank 10K",
+    description: "Portabel laddare",
+    price: 600,
+    image: "images/powerbank.png",
+    category: "Tillbehör"
   }
 ];
