@@ -4,6 +4,7 @@ export const products = [
     name: "Smartphone S1",
     description: "Kraftfull smartphone",
     price: 12500,
+    image: "images/Smartphone.png",
     category: "Mobil"
   },
   {
@@ -11,6 +12,7 @@ export const products = [
     name: "Laptop Pro 15",
     description: "Tunn laptop",
     price: 17299,
+    image: "images/Laptop.png",
     category: "Datorer"
   }
 ];
