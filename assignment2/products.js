@@ -14,5 +14,13 @@ export const products = [
     price: 17299,
     image: "images/Laptop.png",
     category: "Datorer"
+  },
+  {
+    id: 3,
+    name: "Headphones Max",
+    description: "Trådlösa hörlurar",
+    price: 2000,
+    image: "images/headphones.png",
+    category: "Ljud"
   }
 ];
