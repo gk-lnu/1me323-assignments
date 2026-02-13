@@ -23,10 +23,15 @@ function renderProducts() {
   
   const btns = document.querySelectorAll('.add-btn');
   for (const btn of btns) {
-    btn.addEventListener('click', function() {
-      console.log('klick');
+    btn.addEventListener('click', () => {
+      const id = Number(btn.dataset.id);
+      addToCart(id);
     });
   }
+}
+
+function addToCart(id) {
+  console.log('lägg till', id);
 }
 
 renderProducts();
