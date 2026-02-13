@@ -46,5 +46,13 @@ export const products = [
     price: 7499,
     image: "images/Tablet.png",
     category: "Datorer"
+  },
+  {
+    id: 7,
+    name: "Kamera X1",
+    description: "Kompakt systemkamera",
+    price: 8799,
+    image: "images/camera.png",
+    category: "Foto"
   }
 ];
