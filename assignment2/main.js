@@ -1,3 +1,7 @@
 import { products } from './products.js';
 
-console.log(products);
+const grid = document.getElementById('product-grid');
+
+for (const product of products) {
+  console.log(product.name);
+}
