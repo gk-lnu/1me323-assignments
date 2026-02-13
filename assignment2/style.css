@@ -9,6 +9,11 @@
   border: 1px solid #ddd;
   border-radius: 8px;
   padding: 1rem;
+  transition: box-shadow 0.2s;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 .product-card img {
@@ -37,4 +42,8 @@
   color: #fff;
   border: none;
   cursor: pointer;
+}
+
+.add-btn:hover {
+  background: #555;
 }
