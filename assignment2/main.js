@@ -37,7 +37,12 @@ function addToCart(id) {
   } else {
     cart.push({ id: id, quantity: 1 });
   }
-  console.log(cart);
+  renderCart();
+}
+
+function renderCart() {
+  const cartDiv = document.getElementById('cart-items');
+  cartDiv.innerHTML = 'Antal: ' + cart.length;
 }
 
 renderProducts();
