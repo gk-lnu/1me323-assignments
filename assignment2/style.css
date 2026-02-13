@@ -2,3 +2,7 @@
   border: 1px solid #ccc;
   padding: 1rem;
 }
+
+.product-card img {
+  width: 100%;
+}
