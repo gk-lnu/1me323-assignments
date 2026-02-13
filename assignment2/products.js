@@ -38,5 +38,13 @@ export const products = [
     price: 5000,
     image: "images/Smartwatch.png",
     category: "Wearables"
+  },
+  {
+    id: 6,
+    name: "Tablet Air",
+    description: "Lätt surfplatta",
+    price: 7499,
+    image: "images/Tablet.png",
+    category: "Datorer"
   }
 ];
