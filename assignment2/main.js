@@ -1,5 +1,7 @@
 import { products } from './products.js';
 
+let cart = [];
+
 function renderProducts() {
   const grid = document.getElementById('product-grid');
   let html = '';
