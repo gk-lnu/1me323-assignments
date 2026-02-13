@@ -2,10 +2,13 @@ import { products } from './products.js';
 
 function renderProducts() {
   const grid = document.getElementById('product-grid');
+  let html = '';
   
   for (const product of products) {
-    console.log(product.name);
+    html += '<div>' + product.name + '</div>';
   }
+  
+  grid.innerHTML = html;
 }
 
 renderProducts();
