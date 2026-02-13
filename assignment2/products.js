@@ -30,5 +30,13 @@ export const products = [
     price: 1500,
     image: "images/Earbuds.png",
     category: "Ljud"
+  },
+  {
+    id: 5,
+    name: "Smartwatch Ultra",
+    description: "Smartklocka med GPS",
+    price: 5000,
+    image: "images/Smartwatch.png",
+    category: "Wearables"
   }
 ];
