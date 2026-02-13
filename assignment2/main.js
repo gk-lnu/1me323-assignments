@@ -5,10 +5,10 @@ function renderProducts() {
   let html = '';
   
   for (const product of products) {
-    html += '<div class="product-card">';
-    html += '<h3>' + product.name + '</h3>';
-    html += '<p>' + product.price + ' kr</p>';
-    html += '</div>';
+    html += `<div class="product-card">
+      <h3>${product.name}</h3>
+      <p>${product.price} kr</p>
+    </div>`;
   }
   
   grid.innerHTML = html;
