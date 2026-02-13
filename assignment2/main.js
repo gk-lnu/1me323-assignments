@@ -31,7 +31,12 @@ function renderProducts() {
 }
 
 function addToCart(id) {
-  cart.push({ id: id, quantity: 1 });
+  const found = cart.find(item => item.id === id);
+  if (found) {
+    found.quantity += 1;
+  } else {
+    cart.push({ id: id, quantity: 1 });
+  }
   console.log(cart);
 }
 
