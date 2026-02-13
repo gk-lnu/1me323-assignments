@@ -22,5 +22,13 @@ export const products = [
     price: 2000,
     image: "images/headphones.png",
     category: "Ljud"
+  },
+  {
+    id: 4,
+    name: "Earbuds Pro",
+    description: "Kompakta earbuds",
+    price: 1500,
+    image: "images/Earbuds.png",
+    category: "Ljud"
   }
 ];
