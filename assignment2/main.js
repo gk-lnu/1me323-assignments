@@ -6,12 +6,13 @@ function renderProducts() {
   
   for (const product of products) {
     html += `
-      <div class="product-card">
+      <article class="product-card">
         <img src="${product.image}" alt="${product.name}">
+        <span class="category">${product.category}</span>
         <h3>${product.name}</h3>
         <p class="desc">${product.description}</p>
         <p class="price">${product.price} kr</p>
-      </div>
+      </article>
     `;
   }
   
