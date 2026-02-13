@@ -42,7 +42,19 @@ function addToCart(id) {
 
 function renderCart() {
   const cartDiv = document.getElementById('cart-items');
-  cartDiv.innerHTML = 'Antal: ' + cart.length;
+  
+  if (cart.length === 0) {
+    cartDiv.innerHTML = '<p>Tomt</p>';
+    return;
+  }
+  
+  let html = '';
+  for (const item of cart) {
+    const prod = products.find(p => p.id === item.id);
+    html += `<p>${prod.name} x${item.quantity}</p>`;
+  }
+  cartDiv.innerHTML = html;
 }
 
 renderProducts();
+renderCart();
