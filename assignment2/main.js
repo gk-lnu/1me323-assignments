@@ -42,18 +42,26 @@ function addToCart(id) {
 
 function renderCart() {
   const cartDiv = document.getElementById('cart-items');
+  const totalEl = document.getElementById('total');
   
   if (cart.length === 0) {
     cartDiv.innerHTML = '<p>Tomt</p>';
+    totalEl.textContent = '0 kr';
     return;
   }
   
   let html = '';
+  let sum = 0;
+  
   for (const item of cart) {
     const prod = products.find(p => p.id === item.id);
-    html += `<p>${prod.name} x${item.quantity}</p>`;
+    const itemSum = prod.price * item.quantity;
+    sum += itemSum;
+    html += `<p>${prod.name} x${item.quantity} - ${itemSum} kr</p>`;
   }
+  
   cartDiv.innerHTML = html;
+  totalEl.textContent = sum + ' kr';
 }
 
 renderProducts();
