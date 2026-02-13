@@ -2,7 +2,7 @@ export const products = [
   {
     id: 1,
     name: "Smartphone S1",
-    description: "Kraftfull smartphone",
+    description: "Kraftfull smartphone med stor skärm och snabb processor.",
     price: 12500,
     image: "images/Smartphone.png",
     category: "Mobil"
@@ -10,7 +10,7 @@ export const products = [
   {
     id: 2,
     name: "Laptop Pro 15",
-    description: "Tunn laptop",
+    description: "Tunn och lätt laptop med lång batteritid.",
     price: 17299,
     image: "images/Laptop.png",
     category: "Datorer"
@@ -18,7 +18,7 @@ export const products = [
   {
     id: 3,
     name: "Headphones Max",
-    description: "Trådlösa hörlurar",
+    description: "Trådlösa hörlurar med brusreducering.",
     price: 2000,
     image: "images/headphones.png",
     category: "Ljud"
@@ -26,7 +26,7 @@ export const products = [
   {
     id: 4,
     name: "Earbuds Pro",
-    description: "Kompakta earbuds",
+    description: "Kompakta earbuds med kristallklart ljud.",
     price: 1500,
     image: "images/Earbuds.png",
     category: "Ljud"
@@ -34,7 +34,7 @@ export const products = [
   {
     id: 5,
     name: "Smartwatch Ultra",
-    description: "Smartklocka med GPS",
+    description: "Smartklocka med hälsofunktioner och GPS.",
     price: 5000,
     image: "images/Smartwatch.png",
     category: "Wearables"
@@ -42,7 +42,7 @@ export const products = [
   {
     id: 6,
     name: "Tablet Air",
-    description: "Lätt surfplatta",
+    description: "Lätt surfplatta perfekt för underhållning och jobb.",
     price: 7499,
     image: "images/Tablet.png",
     category: "Datorer"
@@ -50,7 +50,7 @@ export const products = [
   {
     id: 7,
     name: "Kamera X1",
-    description: "Kompakt systemkamera",
+    description: "Kompakt systemkamera för fotografer.",
     price: 8799,
     image: "images/camera.png",
     category: "Foto"
@@ -58,7 +58,7 @@ export const products = [
   {
     id: 8,
     name: "Powerbank 10K",
-    description: "Portabel laddare",
+    description: "Portabel laddare med 10000mAh kapacitet.",
     price: 600,
     image: "images/powerbank.png",
     category: "Tillbehör"
