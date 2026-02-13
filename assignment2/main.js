@@ -9,7 +9,8 @@ function renderProducts() {
       <div class="product-card">
         <img src="${product.image}" alt="${product.name}">
         <h3>${product.name}</h3>
-        <p>${product.price} kr</p>
+        <p class="desc">${product.description}</p>
+        <p class="price">${product.price} kr</p>
       </div>
     `;
   }
