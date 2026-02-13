@@ -20,6 +20,13 @@ function renderProducts() {
   }
   
   grid.innerHTML = html;
+  
+  const btns = document.querySelectorAll('.add-btn');
+  for (const btn of btns) {
+    btn.addEventListener('click', function() {
+      console.log('klick');
+    });
+  }
 }
 
 renderProducts();
