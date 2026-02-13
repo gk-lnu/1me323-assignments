@@ -31,7 +31,8 @@ function renderProducts() {
 }
 
 function addToCart(id) {
-  console.log('lägg till', id);
+  cart.push({ id: id, quantity: 1 });
+  console.log(cart);
 }
 
 renderProducts();
