@@ -3,15 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Elektronik</title>
+  <title>Elektronik - Produkter</title>
+  <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <h1>Elektronik</h1>
+    <nav id="main-nav"></nav>
   </header>
   <main>
     <section class="products">
+      <h2>Våra produkter</h2>
       <div id="product-grid"></div>
     </section>
     <aside class="cart">
@@ -21,9 +24,13 @@
         <span>Totalt:</span>
         <span id="total">0 kr</span>
       </div>
-      <button id="clear-btn">Töm</button>
+      <button id="clear-btn">Töm kundvagn</button>
     </aside>
   </main>
+  <footer>
+    <p>&copy; 2025 Gustav Koser</p>
+  </footer>
+  <script type="module" src="../js/nav.js"></script>
   <script type="module" src="main.js"></script>
 </body>
 </html>
