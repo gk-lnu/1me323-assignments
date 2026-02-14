@@ -23,7 +23,7 @@ main {
 .product-card {
   background: #fff;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 6px;
   padding: 1rem;
   transition: box-shadow 0.2s;
 }
@@ -86,7 +86,7 @@ main {
   width: 300px;
   background: #f9f9f9;
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 6px;
   border: 1px solid #ddd;
   height: fit-content;
   position: sticky;
