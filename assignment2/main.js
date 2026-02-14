@@ -1,6 +1,6 @@
 import { products } from './products.js';
 
-let cart = [];
+let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
 function renderProducts() {
   const grid = document.getElementById('product-grid');
@@ -37,7 +37,12 @@ function addToCart(id) {
   } else {
     cart.push({ id: id, quantity: 1 });
   }
+  saveCart();
   renderCart();
+}
+
+function saveCart() {
+  localStorage.setItem('cart', JSON.stringify(cart));
 }
 
 function renderCart() {
@@ -66,6 +71,7 @@ function renderCart() {
 
 function clearCart() {
   cart = [];
+  saveCart();
   renderCart();
 }
 
