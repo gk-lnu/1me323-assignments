@@ -1,7 +1,7 @@
 main {
   display: flex;
   gap: 2rem;
-  padding: 1.5rem;
+  padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -85,7 +85,7 @@ main {
 .cart {
   width: 300px;
   background: #f9f9f9;
-  padding: 1.5rem;
+  padding: 2rem;
   border-radius: 8px;
   border: 1px solid #ddd;
   height: fit-content;
