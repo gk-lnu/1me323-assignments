@@ -42,7 +42,7 @@ main {
 
 .product-card h3 {
   margin: 0.75rem 0 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .category {
@@ -115,7 +115,7 @@ main {
 .cart-total {
   display: flex;
   justify-content: space-between;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: bold;
   padding: 1rem 0;
   border-top: 2px solid #333;
