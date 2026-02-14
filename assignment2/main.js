@@ -1,7 +1,9 @@
 import { products } from './products.js';
 
+// Hämta sparad kundvagn från localStorage
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+// Rendera produkter
 function renderProducts() {
   const grid = document.getElementById('product-grid');
   let html = '';
@@ -21,6 +23,7 @@ function renderProducts() {
   
   grid.innerHTML = html;
   
+  // Lägg till eventlyssnare
   const btns = document.querySelectorAll('.add-btn');
   for (const btn of btns) {
     btn.addEventListener('click', () => {
@@ -30,6 +33,7 @@ function renderProducts() {
   }
 }
 
+// Lägg till i kundvagn
 function addToCart(id) {
   const found = cart.find(item => item.id === id);
   if (found) {
@@ -41,16 +45,18 @@ function addToCart(id) {
   renderCart();
 }
 
+// Spara till localStorage
 function saveCart() {
   localStorage.setItem('cart', JSON.stringify(cart));
 }
 
+// Rendera kundvagn
 function renderCart() {
   const cartDiv = document.getElementById('cart-items');
   const totalEl = document.getElementById('total');
   
   if (cart.length === 0) {
-    cartDiv.innerHTML = '<p>Tomt</p>';
+    cartDiv.innerHTML = '<p>Kundvagnen är tom</p>';
     totalEl.textContent = '0 kr';
     return;
   }
@@ -62,13 +68,20 @@ function renderCart() {
     const prod = products.find(p => p.id === item.id);
     const itemSum = prod.price * item.quantity;
     sum += itemSum;
-    html += `<p>${prod.name} x${item.quantity} - ${itemSum} kr</p>`;
+    html += `
+      <div class="cart-item">
+        <span>${prod.name}</span>
+        <span>${item.quantity} st</span>
+        <span>${itemSum} kr</span>
+      </div>
+    `;
   }
   
   cartDiv.innerHTML = html;
   totalEl.textContent = sum + ' kr';
 }
 
+// Töm kundvagn
 function clearCart() {
   cart = [];
   saveCart();
