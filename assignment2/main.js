@@ -1,3 +1,4 @@
+import { createNav } from '../nav.js';
 import { products } from './products.js';
 
 // Hämta sparad kundvagn från localStorage
@@ -92,3 +93,7 @@ document.getElementById('clear-btn').addEventListener('click', clearCart);
 
 renderProducts();
 renderCart();
+
+// Skapa navigation
+const header = document.querySelector('header');
+header.append(createNav());
