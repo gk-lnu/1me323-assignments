@@ -10,5 +10,41 @@
     "name": "Greta Grindfräs",
     "skillLevel": 7,
     "catchphrase": "Jag klipper konkurrensen!"
+  },
+  {
+    "id": "r-003",
+    "name": "Björn-Borg 3000",
+    "skillLevel": 6,
+    "catchphrase": "Ni kan inte röra mig!"
+  },
+  {
+    "id": "r-004",
+    "name": "Blixtra",
+    "skillLevel": 9,
+    "catchphrase": "Snabbare än din WiFi!"
+  },
+  {
+    "id": "r-005",
+    "name": "Hammare-Henrietta",
+    "skillLevel": 7,
+    "catchphrase": "Det är hammar-dags!"
+  },
+  {
+    "id": "r-006",
+    "name": "Mystiska Molnet",
+    "skillLevel": 5,
+    "catchphrase": null
+  },
+  {
+    "id": "r-007",
+    "name": "Skrot-Sigge",
+    "skillLevel": 4,
+    "catchphrase": "En robots skräp är en annan robots skatt!"
+  },
+  {
+    "id": "r-008",
+    "name": "Nansen Nansen",
+    "skillLevel": null,
+    "catchphrase": null
   }
 ]
