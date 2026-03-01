@@ -1,0 +1,14 @@
+[
+  {
+    "id": "r-001",
+    "name": "Torsten Turbomotor",
+    "skillLevel": 8,
+    "catchphrase": "Brinner för att vinna!"
+  },
+  {
+    "id": "r-002",
+    "name": "Greta Grindfräs",
+    "skillLevel": 7,
+    "catchphrase": "Jag klipper konkurrensen!"
+  }
+]
