@@ -1,6 +1,8 @@
 // huvudscript
 import { Match } from "./Match.js";
 
+const turneringContainer = document.getElementById("turnering");
+
 async function hämtaDeltagare() {
   const response = await fetch("contestants.json");
   const data = await response.json();
@@ -16,10 +18,30 @@ function skapaRunda(deltagare) {
   return matcher;
 }
 
+function renderaRunda(matcher, titel) {
+  const rundaDiv = document.createElement("div");
+  rundaDiv.classList.add("round");
+  
+  const rubrik = document.createElement("h2");
+  rubrik.textContent = titel;
+  rundaDiv.append(rubrik);
+  
+  for (const match of matcher) {
+    rundaDiv.append(match.skapaElement());
+  }
+  
+  return rundaDiv;
+}
+
 async function init() {
   const deltagare = await hämtaDeltagare();
   const kvartsfinal = skapaRunda(deltagare);
-  console.log(kvartsfinal);
+  
+  const bracket = document.createElement("div");
+  bracket.classList.add("bracket");
+  bracket.append(renderaRunda(kvartsfinal, "Kvartsfinal"));
+  
+  turneringContainer.append(bracket);
 }
 
 init();
