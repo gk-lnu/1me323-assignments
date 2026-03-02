@@ -56,21 +56,38 @@ export class Match {
     }
   }
 
+  #skapaDeltagareElement(deltagare) {
+    const div = document.createElement("div");
+    div.classList.add("deltagare");
+    
+    const namn = document.createElement("span");
+    namn.classList.add("namn");
+    namn.textContent = deltagare.name;
+    
+    const catchphrase = document.createElement("span");
+    catchphrase.classList.add("catchphrase");
+    const phrase = deltagare.catchphrase ?? "...";
+    catchphrase.textContent = phrase === "..." ? phrase : "\"" + phrase + "\"";
+    
+    div.append(namn, catchphrase);
+    return div;
+  }
+
   skapaElement() {
     const div = document.createElement("div");
     div.classList.add("match");
     
-    const d1 = document.createElement("div");
-    d1.classList.add("deltagare");
-    d1.textContent = this.#deltagare1.name;
+    const d1 = this.#skapaDeltagareElement(this.#deltagare1);
     this.#d1Element = d1;
     
-    const d2 = document.createElement("div");
-    d2.classList.add("deltagare");
-    d2.textContent = this.#deltagare2.name;
+    const vs = document.createElement("div");
+    vs.classList.add("vs");
+    vs.textContent = "VS";
+    
+    const d2 = this.#skapaDeltagareElement(this.#deltagare2);
     this.#d2Element = d2;
     
-    div.append(d1, d2);
+    div.append(d1, vs, d2);
     this.#element = div;
     return div;
   }
