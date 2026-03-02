@@ -2,6 +2,7 @@
 import { Match } from "./Match.js";
 
 const turneringContainer = document.getElementById("turnering");
+const startaOmKnapp = document.getElementById("starta-om");
 
 async function hämtaDeltagare() {
   const response = await fetch("contestants.json");
@@ -37,27 +38,26 @@ function renderaRunda(matcher, titel) {
   return rundaDiv;
 }
 
-async function init() {
+async function startaTurnering() {
+  turneringContainer.innerHTML = "";
+  
   const deltagare = await hämtaDeltagare();
   
   const bracket = document.createElement("div");
   bracket.classList.add("bracket");
   
-  // Kvartsfinal
   const kvartsfinal = skapaRunda(deltagare);
   for (const match of kvartsfinal) {
     match.spela();
   }
   bracket.append(renderaRunda(kvartsfinal, "Kvartsfinal"));
   
-  // Semifinal
   const semifinal = skapaRunda(hämtaVinnare(kvartsfinal));
   for (const match of semifinal) {
     match.spela();
   }
   bracket.append(renderaRunda(semifinal, "Semifinal"));
   
-  // Final
   const final = skapaRunda(hämtaVinnare(semifinal));
   for (const match of final) {
     match.spela();
@@ -67,4 +67,5 @@ async function init() {
   turneringContainer.append(bracket);
 }
 
-init();
+startaOmKnapp.addEventListener("click", startaTurnering);
+startaTurnering();
