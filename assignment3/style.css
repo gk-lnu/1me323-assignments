@@ -104,3 +104,10 @@ main {
 .förlorare {
   opacity: 0.5;
 }
+
+footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  text-align: center;
+  color: #999;
+}
