@@ -18,6 +18,10 @@ function skapaRunda(deltagare) {
   return matcher;
 }
 
+function hämtaVinnare(matcher) {
+  return matcher.map(match => match.vinnare);
+}
+
 function renderaRunda(matcher, titel) {
   const rundaDiv = document.createElement("div");
   rundaDiv.classList.add("round");
@@ -35,11 +39,30 @@ function renderaRunda(matcher, titel) {
 
 async function init() {
   const deltagare = await hämtaDeltagare();
-  const kvartsfinal = skapaRunda(deltagare);
   
   const bracket = document.createElement("div");
   bracket.classList.add("bracket");
+  
+  // Kvartsfinal
+  const kvartsfinal = skapaRunda(deltagare);
+  for (const match of kvartsfinal) {
+    match.spela();
+  }
   bracket.append(renderaRunda(kvartsfinal, "Kvartsfinal"));
+  
+  // Semifinal
+  const semifinal = skapaRunda(hämtaVinnare(kvartsfinal));
+  for (const match of semifinal) {
+    match.spela();
+  }
+  bracket.append(renderaRunda(semifinal, "Semifinal"));
+  
+  // Final
+  const final = skapaRunda(hämtaVinnare(semifinal));
+  for (const match of final) {
+    match.spela();
+  }
+  bracket.append(renderaRunda(final, "Final"));
   
   turneringContainer.append(bracket);
 }
