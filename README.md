@@ -6,9 +6,10 @@ Repository för inlämningsuppgifter i kursen Webbteknik 3 (1ME323).
 
 - Uppgift 1 - Samlingssida för inlämningsuppgifter
 - Uppgift 2 - Produktsida med kundvagn
+- Uppgift 3 - Turneringsgenerator
 
 ## Om
 
-**Namn:** Gustav Koser  
-**Kurs:** 1ME323  
-**GitHub:** gk-lnu
+Namn: Gustav Koser
+Kurs: 1ME323
+GitHub: gk-lnu
