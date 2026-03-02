@@ -7,9 +7,19 @@ async function hämtaDeltagare() {
   return data;
 }
 
+function skapaRunda(deltagare) {
+  const matcher = [];
+  for (let i = 0; i < deltagare.length; i += 2) {
+    const match = new Match(deltagare[i], deltagare[i + 1]);
+    matcher.push(match);
+  }
+  return matcher;
+}
+
 async function init() {
   const deltagare = await hämtaDeltagare();
-  console.log(deltagare);
+  const kvartsfinal = skapaRunda(deltagare);
+  console.log(kvartsfinal);
 }
 
 init();
