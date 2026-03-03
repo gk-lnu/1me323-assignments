@@ -111,3 +111,9 @@ footer {
   text-align: center;
   color: #999;
 }
+
+@media (max-width: 768px) {
+  .bracket {
+    flex-direction: column;
+  }
+}
