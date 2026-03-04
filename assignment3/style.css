@@ -78,7 +78,7 @@ main {
 }
 
 .namn {
-  font-weight: 600;
+  font-weight: bold;
   display: block;
 }
 
@@ -93,7 +93,7 @@ main {
 .vs {
   text-align: center;
   color: #c44;
-  font-weight: 600;
+  font-weight: bold;
   padding: 0.25rem;
 }
 
