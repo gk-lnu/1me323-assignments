@@ -27,7 +27,7 @@ header p {
 }
 
 .kontroller {
-  padding: 1rem;
+  padding: 0.75rem 1rem;
   text-align: center;
 }
 
@@ -45,13 +45,13 @@ button:hover {
 }
 
 main {
-  padding: 1rem;
+  padding: 0.75rem 1rem;
 }
 
 .bracket {
   display: flex;
   gap: 3rem;
-  padding: 1rem;
+  padding: 0.75rem 1rem;
 }
 
 .round {
@@ -74,7 +74,7 @@ main {
 }
 
 .deltagare {
-  padding: 1rem;
+  padding: 0.75rem 1rem;
 }
 
 .namn {
@@ -107,7 +107,7 @@ main {
 
 footer {
   margin-top: 3rem;
-  padding: 1rem;
+  padding: 0.75rem 1rem;
   text-align: center;
   color: #999;
 }
