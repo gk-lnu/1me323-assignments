@@ -1,15 +1,17 @@
-// huvudscript
+// huvudscript för turneringen
 import { Match } from "./Match.js";
 
 const turneringContainer = document.getElementById("turnering");
 const startaOmKnapp = document.getElementById("starta-om");
 
+// hämta deltagare från json
 async function hämtaDeltagare() {
   const response = await fetch("contestants.json");
   const data = await response.json();
   return data;
 }
 
+// skapa matcher från en lista med deltagare
 function skapaRunda(deltagare) {
   const matcher = [];
   for (let i = 0; i < deltagare.length; i += 2) {
@@ -19,10 +21,12 @@ function skapaRunda(deltagare) {
   return matcher;
 }
 
+// hämta vinnare från en lista med matcher
 function hämtaVinnare(matcher) {
   return matcher.map(match => match.vinnare);
 }
 
+// rendera en runda med matcher
 function renderaRunda(matcher, titel) {
   const rundaDiv = document.createElement("div");
   rundaDiv.classList.add("round");
@@ -38,6 +42,7 @@ function renderaRunda(matcher, titel) {
   return rundaDiv;
 }
 
+// starta turneringen
 async function startaTurnering() {
   turneringContainer.innerHTML = "";
   
@@ -46,18 +51,21 @@ async function startaTurnering() {
   const bracket = document.createElement("div");
   bracket.classList.add("bracket");
   
+  // kvartsfinal
   const kvartsfinal = skapaRunda(deltagare);
   for (const match of kvartsfinal) {
     match.spela();
   }
   bracket.append(renderaRunda(kvartsfinal, "Kvartsfinal"));
   
+  // semifinal
   const semifinal = skapaRunda(hämtaVinnare(kvartsfinal));
   for (const match of semifinal) {
     match.spela();
   }
   bracket.append(renderaRunda(semifinal, "Semifinal"));
   
+  // final
   const final = skapaRunda(hämtaVinnare(semifinal));
   for (const match of final) {
     match.spela();
@@ -67,5 +75,8 @@ async function startaTurnering() {
   turneringContainer.append(bracket);
 }
 
+// event listeners
 startaOmKnapp.addEventListener("click", startaTurnering);
+
+// starta direkt
 startaTurnering();
