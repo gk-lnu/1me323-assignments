@@ -85,7 +85,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 3rem;
+  margin-top: 3.5rem;
 }
 
 #semifinal .match:first-child {
@@ -140,7 +140,7 @@ main {
 }
 
 footer {
-  margin-top: 3rem;
+  margin-top: 3.5rem;
   padding: 1rem;
   text-align: center;
   color: #999;
