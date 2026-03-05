@@ -1,8 +1,13 @@
 // huvudscript för turneringen
 import { Match } from "./Match.js";
 
-const turneringContainer = document.getElementById("turnering");
+const simuleraKnapp = document.getElementById("simulera");
 const startaOmKnapp = document.getElementById("starta-om");
+
+let kvartsfinal = [];
+let semifinal = [];
+let final = [];
+let currentRunda = "kvartsfinal";
 
 // hämta deltagare från json
 async function hämtaDeltagare() {
@@ -26,56 +31,82 @@ function hämtaVinnare(matcher) {
   return matcher.map(match => match.vinnare);
 }
 
-// rendera en runda med matcher
-function renderaRunda(matcher, titel) {
-  const rundaDiv = document.createElement("div");
-  rundaDiv.classList.add("round");
-  
-  const rubrik = document.createElement("h2");
-  rubrik.textContent = titel;
-  rundaDiv.append(rubrik);
-  
+// rendera matcher i en container
+function renderaRunda(matcher, container) {
   for (const match of matcher) {
-    rundaDiv.append(match.skapaElement());
+    container.append(match.skapaElement());
+  }
+}
+
+// simulera kvartsfinal
+function simuleraKvartsfinal() {
+  for (const match of kvartsfinal) {
+    match.spela();
   }
   
-  return rundaDiv;
+  const semiDeltagare = hämtaVinnare(kvartsfinal);
+  semifinal = skapaRunda(semiDeltagare);
+  renderaRunda(semifinal, document.getElementById("semifinal"));
+  
+  currentRunda = "semifinal";
+  simuleraKnapp.textContent = "Simulera Semifinal";
+}
+
+// simulera semifinal
+function simulerasemifinal() {
+  for (const match of semifinal) {
+    match.spela();
+  }
+  
+  const finalDeltagare = hämtaVinnare(semifinal);
+  final = skapaRunda(finalDeltagare);
+  renderaRunda(final, document.getElementById("final"));
+  
+  currentRunda = "final";
+  simuleraKnapp.textContent = "Simulera Final";
+}
+
+// simulera final
+function simuleraFinal() {
+  for (const match of final) {
+    match.spela();
+  }
+  
+  currentRunda = "klar";
+  simuleraKnapp.style.display = "none";
+}
+
+// hantera klick på simulera-knappen
+function hanteraSimulera() {
+  if (currentRunda === "kvartsfinal") {
+    simuleraKvartsfinal();
+  } else if (currentRunda === "semifinal") {
+    simulerasemifinal();
+  } else if (currentRunda === "final") {
+    simuleraFinal();
+  }
 }
 
 // starta turneringen
 async function startaTurnering() {
-  turneringContainer.innerHTML = "";
+  document.getElementById("kvartsfinal").innerHTML = "";
+  document.getElementById("semifinal").innerHTML = "";
+  document.getElementById("final").innerHTML = "";
   
   const deltagare = await hämtaDeltagare();
   
-  const bracket = document.createElement("div");
-  bracket.classList.add("bracket");
+  kvartsfinal = skapaRunda(deltagare);
+  renderaRunda(kvartsfinal, document.getElementById("kvartsfinal"));
   
-  // kvartsfinal
-  const kvartsfinal = skapaRunda(deltagare);
-  for (const match of kvartsfinal) {
-    match.spela();
-  }
-  bracket.append(renderaRunda(kvartsfinal, "Kvartsfinal"));
-  
-  // semifinal
-  const semifinal = skapaRunda(hämtaVinnare(kvartsfinal));
-  for (const match of semifinal) {
-    match.spela();
-  }
-  bracket.append(renderaRunda(semifinal, "Semifinal"));
-  
-  // final
-  const final = skapaRunda(hämtaVinnare(semifinal));
-  for (const match of final) {
-    match.spela();
-  }
-  bracket.append(renderaRunda(final, "Final"));
-  
-  turneringContainer.append(bracket);
+  semifinal = [];
+  final = [];
+  currentRunda = "kvartsfinal";
+  simuleraKnapp.textContent = "Simulera Kvartsfinal";
+  simuleraKnapp.style.display = "inline-block";
 }
 
 // event listeners
+simuleraKnapp.addEventListener("click", hanteraSimulera);
 startaOmKnapp.addEventListener("click", startaTurnering);
 
 // starta direkt
