@@ -96,7 +96,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 8.5rem;
+  margin-top: 9rem;
 }
 
 .match {
