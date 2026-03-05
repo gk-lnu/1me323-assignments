@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ROBOTARENAN</title>
+  <title>Robotarenan</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,10 +12,24 @@
     <p>8 robotar. 3 rundor. 1 mästare.</p>
   </header>
   <div class="kontroller">
+    <button id="simulera">Simulera Kvartsfinal</button>
     <button id="starta-om">Starta om</button>
   </div>
   <main>
-    <div id="turnering"></div>
+    <div class="bracket">
+      <div class="round">
+        <h2>KVARTSFINAL</h2>
+        <div id="kvartsfinal"></div>
+      </div>
+      <div class="round">
+        <h2>SEMIFINAL</h2>
+        <div id="semifinal"></div>
+      </div>
+      <div class="round">
+        <h2>FINAL</h2>
+        <div id="final"></div>
+      </div>
+    </div>
   </main>
   <footer>
     <p>© 2026 Gustav Koser</p>
