@@ -102,7 +102,7 @@ main {
 .match {
   background: white;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 6px;
   overflow: hidden;
 }
 
