@@ -66,13 +66,17 @@ export class Match {
     const namn = document.createElement("span");
     namn.classList.add("namn");
     namn.textContent = deltagare.name;
+
+    const skill = document.createElement("span");
+    skill.classList.add("skill");
+    skill.textContent = "Nivå: " + (deltagare.skillLevel ?? 5);
     
     const catchphrase = document.createElement("span");
     catchphrase.classList.add("catchphrase");
     const phrase = deltagare.catchphrase ?? "...";
     catchphrase.textContent = phrase === "..." ? phrase : "\"" + phrase + "\"";
     
-    div.append(namn, catchphrase);
+    div.append(namn, skill, catchphrase);
     return div;
   }
 
