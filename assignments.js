@@ -1,4 +1,3 @@
-// datastruktur för alla uppgifter
 export const assignments = [
   {
     id: "assignment1",

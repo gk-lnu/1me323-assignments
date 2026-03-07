@@ -1,4 +1,3 @@
-// klass för en match
 export class Match {
   #deltagare1;
   #deltagare2;
@@ -32,15 +31,11 @@ export class Match {
     return this.#vinnare !== null;
   }
 
-  // avgör vinnare slumpmässigt baserat på skillLevel
   spela() {
     if (this.#vinnare !== null) return;
     
-    // använd ?? för null-värden
     const skill1 = this.#deltagare1.skillLevel ?? 5;
     const skill2 = this.#deltagare2.skillLevel ?? 5;
-    
-    // beräkna sannolikhet
     const chans1 = skill1 / (skill1 + skill2);
     
     if (Math.random() < chans1) {
@@ -52,7 +47,6 @@ export class Match {
     this.#uppdateraElement();
   }
 
-  // uppdatera dom-elementet
   #uppdateraElement() {
     if (!this.#d1Element || !this.#d2Element) return;
     
@@ -65,7 +59,6 @@ export class Match {
     }
   }
 
-  // hjälpmetod för att skapa deltagare-element
   #skapaDeltagareElement(deltagare) {
     const div = document.createElement("div");
     div.classList.add("deltagare");
@@ -83,7 +76,6 @@ export class Match {
     return div;
   }
 
-  // skapa och returnera dom-element för matchen
   skapaElement() {
     const div = document.createElement("div");
     div.classList.add("match");
