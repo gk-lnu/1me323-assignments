@@ -33,7 +33,7 @@
     "id": "r-006",
     "name": "Mystiska Molnet",
     "skillLevel": 5,
-    "catchphrase": null
+    "catchphrase": "Nu ser du mig, nu ser du mig inte."
   },
   {
     "id": "r-007",
@@ -43,8 +43,8 @@
   },
   {
     "id": "r-008",
-    "name": "Nansen Nansen",
-    "skillLevel": null,
-    "catchphrase": null
+    "name": "Volt-Viktor",
+    "skillLevel": 6,
+    "catchphrase": "Laddar upp för seger!"
   }
 ]
