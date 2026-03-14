@@ -1,0 +1,1 @@
+// Hjälpfunktioner för spökhusbyrån
