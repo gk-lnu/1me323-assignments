@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Villa Skrikeborg",
+    "location": "Mörkö, Södermanland",
+    "coordinates": { "lat": 59.04, "lng": 17.72 },
+    "description": "En charmig röd villa där väggarna skriker varje midnatt. Förra ägaren försvann spårlöst 1987 — men hans röst hörs fortfarande från källaren.",
+    "pricePerNight": 800,
+    "scareLevel": 3,
+    "ghostTypes": ["poltergeist", "skuggvarelse"],
+    "hasWifi": true,
+    "image": "villa-skrikeborg.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Slottet Ingen-Återvändo",
+    "location": "Ystad, Skåne",
+    "coordinates": { "lat": 55.43, "lng": 13.82 },
+    "description": "Ett medeltida slott med 47 rum. Bara 43 av dem syns på ritningen. Gästerna som hittar de andra fyra brukar inte berätta om dem.",
+    "pricePerNight": 2500,
+    "scareLevel": 5,
+    "ghostTypes": ["kedjerassel", "vit dam", "huvudlös riddare"],
+    "hasWifi": false,
+    "image": "slottet-ingen-atervando.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Fyren vid Skräckudden",
+    "location": "Smögen, Bohuslän",
+    "coordinates": { "lat": 58.35, "lng": 11.22 },
+    "description": "En avlägsen fyr som blinkar i morsekod om nätterna. Ingen har lyckats tyda meddelandet. Ingen som försökt har velat stanna.",
+    "pricePerNight": 1100,
+    "scareLevel": 4,
+    "ghostTypes": ["sjöspöke", "dimvandare"],
+    "hasWifi": false,
+    "image": "fyren-skrackudden.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Överlook-stugan",
+    "location": "Sälen, Dalarna",
+    "coordinates": { "lat": 61.16, "lng": 13.26 },
+    "description": "En mysig fjällstuga som verkar ha fler rum ju längre man bor där. Receptionen rekommenderar att man inte pratar med tvillingarna i korridoren.",
+    "pricePerNight": 1400,
+    "scareLevel": 4,
+    "ghostTypes": ["tvillingspöken", "skuggvarelse"],
+    "hasWifi": true,
+    "image": "overlook-stugan.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Gråtande Torpet",
+    "location": "Fårö, Gotland",
+    "coordinates": { "lat": 57.93, "lng": 19.28 },
+    "description": "Ett pittoreskt torp från 1800-talet som gråter salt vatten ur väggarna vid fullmåne. Havsutsikt ingår, oavsett väderstreck.",
+    "pricePerNight": 650,
+    "scareLevel": 2,
+    "ghostTypes": ["vit dam"],
+    "hasWifi": true,
+    "image": "gratande-torpet.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Spökfabriken",
+    "location": "Norrköping",
+    "coordinates": { "lat": 58.59, "lng": 16.18 },
+    "description": "En ombyggd textilfabrik där maskinerna startar av sig själva klockan 03:00. Produktionen verkar gå utmärkt — men ingen vet vad som tillverkas.",
+    "pricePerNight": 900,
+    "scareLevel": 3,
+    "ghostTypes": ["industrispöke", "poltergeist"],
+    "hasWifi": true,
+    "image": "spokfabriken.jpg"
+  }
+]
