@@ -10,3 +10,9 @@ body {
   color: #333;
   line-height: 1.6;
 }
+
+header {
+  background: #1a1a2e;
+  color: white;
+  padding: 1rem 2rem;
+}
