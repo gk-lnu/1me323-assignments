@@ -150,3 +150,57 @@ footer {
   font-size: 0.85rem;
   margin-top: 2rem;
 }
+
+.filter-section {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.filter-section h2 {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.filter-form {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  align-items: end;
+}
+
+.filter-field label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.filter-field input[type="number"],
+.filter-field select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-family: inherit;
+}
+
+.filter-field input[type="range"] {
+  width: 100%;
+}
+
+.checkbox-field {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.checkbox-field label {
+  margin-bottom: 0;
+}
