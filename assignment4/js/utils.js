@@ -15,3 +15,7 @@ export function getScareText(level) {
   if (level === 5) return "Ren terror";
   return "Okänd";
 }
+
+export function showError(container, message) {
+  container.innerHTML = '<p class="error-message">' + message + '</p>';
+}
