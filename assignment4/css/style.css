@@ -80,3 +80,30 @@ main > h1 {
   height: 200px;
   object-fit: cover;
 }
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-content h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.card-content .location {
+  color: #666;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-content .price {
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 0.25rem;
+}
+
+.card-content .scare {
+  font-size: 0.85rem;
+  color: #888;
+  margin-bottom: 0.75rem;
+}
