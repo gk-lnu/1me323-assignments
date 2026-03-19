@@ -56,3 +56,27 @@ main {
 main > h1 {
   margin-bottom: 1.5rem;
 }
+
+.house-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.house-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.house-card:hover {
+  transform: translateY(-4px);
+}
+
+.house-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
