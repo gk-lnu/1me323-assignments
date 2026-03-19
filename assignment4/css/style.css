@@ -124,3 +124,21 @@ main > h1 {
 .btn:hover {
   background: #2d2d4e;
 }
+
+.no-results {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.error-message {
+  color: #c0392b;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.error-message a {
+  color: #1a1a2e;
+}
