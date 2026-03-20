@@ -91,7 +91,7 @@ main > h1 {
 }
 
 .card-content .location {
-  color: #666;
+  color: #777;
   font-size: 0.85rem;
   margin-bottom: 0.5rem;
 }
@@ -129,7 +129,7 @@ main > h1 {
   grid-column: 1 / -1;
   text-align: center;
   padding: 2rem;
-  color: #666;
+  color: #777;
   font-size: 1.1rem;
 }
 
@@ -162,7 +162,7 @@ footer {
 .filter-section h2 {
   font-size: 1.1rem;
   margin-bottom: 1rem;
-  color: #666;
+  color: #777;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
@@ -230,7 +230,7 @@ footer {
 }
 
 #house-detail .location {
-  color: #666;
+  color: #777;
   margin-bottom: 1rem;
 }
 
