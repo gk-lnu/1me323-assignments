@@ -219,7 +219,7 @@ footer {
 
 .detail-image {
   width: 100%;
-  max-height: 400px;
+  max-height: 380px;
   object-fit: cover;
   border-radius: 8px;
   margin-bottom: 1rem;
