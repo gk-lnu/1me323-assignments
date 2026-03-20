@@ -252,3 +252,37 @@ footer {
 .info-grid p {
   font-size: 0.9rem;
 }
+
+#booking-section {
+  margin-top: 2rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+#booking-section h2 {
+  margin-bottom: 1rem;
+}
+
+.booking-form .field {
+  margin-bottom: 1rem;
+}
+
+.booking-form label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+}
+
+.booking-form input[type="date"],
+.booking-form input[type="number"],
+.booking-form input[type="text"] {
+  width: 100%;
+  max-width: 300px;
+  padding: 0.5rem;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-family: inherit;
+}
