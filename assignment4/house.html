@@ -16,11 +16,62 @@
       </ul>
     </nav>
   </header>
+
   <main>
     <section id="house-detail"></section>
+
+    <section id="weather-section"></section>
+
+    <section id="booking-section">
+      <h2>Boka din vistelse</h2>
+
+      <div class="booking-form">
+        <div class="field">
+          <label for="check-in">Incheckningsdatum</label>
+          <input type="date" id="check-in" required>
+        </div>
+
+        <div class="field">
+          <label for="days">Antal dagar</label>
+          <input type="number" id="days" value="1" min="1">
+        </div>
+
+        <fieldset>
+          <legend>Tillägg</legend>
+          <div class="extras">
+            <div>
+              <input type="checkbox" id="breakfast">
+              <label for="breakfast">Frukost (100 kr/dag)</label>
+            </div>
+            <div>
+              <input type="checkbox" id="ghost-tour">
+              <label for="ghost-tour">Spökvandring (300 kr)</label>
+            </div>
+            <div>
+              <input type="checkbox" id="seance">
+              <label for="seance">Nattlig seans (500 kr)</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="promo-code">Kampanjkod</label>
+          <input type="text" id="promo-code" placeholder="t.ex. GHOST20">
+        </div>
+
+        <p class="total">Totalpris: <strong id="total-price">0 kr</strong></p>
+
+        <div id="booking-error" class="error-message"></div>
+
+        <button type="button" id="book-btn" class="btn">Boka nu</button>
+      </div>
+
+      <div id="booking-confirmation" class="confirmation"></div>
+    </section>
   </main>
+
   <footer>
-    <p>© 2025 Spökhusbyrån AB</p>
+    <p>© 2025 Spökhusbyrån AB — Vi hyr ut skräck sedan 1987</p>
   </footer>
 </body>
 </html>
