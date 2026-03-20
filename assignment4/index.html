@@ -16,12 +16,42 @@
       </ul>
     </nav>
   </header>
+
   <main>
     <h1>Våra hemsökta hus</h1>
+
+    <section class="filter-section">
+      <h2>Filtrera</h2>
+      <div class="filter-form">
+        <div class="filter-field">
+          <label for="max-price">Maxpris per natt (kr)</label>
+          <input type="number" id="max-price" placeholder="t.ex. 1500">
+        </div>
+
+        <div class="filter-field">
+          <label for="scare-level">Lägsta skräcknivå: <span id="scare-label">Mysigt</span></label>
+          <input type="range" id="scare-level" min="1" max="5" value="1">
+        </div>
+
+        <div class="filter-field">
+          <label for="ghost-type">Typ av spöke</label>
+          <select id="ghost-type">
+            <option value="">Alla typer</option>
+          </select>
+        </div>
+
+        <div class="filter-field checkbox-field">
+          <input type="checkbox" id="wifi-required">
+          <label for="wifi-required">Kräv WiFi</label>
+        </div>
+      </div>
+    </section>
+
     <section id="house-list" class="house-grid"></section>
   </main>
+
   <footer>
-    <p>© 2025 Spökhusbyrån AB</p>
+    <p>© 2025 Spökhusbyrån AB — Vi hyr ut skräck sedan 1987</p>
   </footer>
 </body>
 </html>
