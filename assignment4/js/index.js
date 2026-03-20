@@ -38,8 +38,30 @@ function populateGhostTypes() {
   }
 }
 
+function filterHouses() {
+  const maxPrice = Number(maxPriceInput.value);
+  const minScare = Number(scareSlider.value);
+  const ghostType = ghostTypeSelect.value;
+  const wifiRequired = wifiCheckbox.checked;
+
+  const filtered = allHouses.filter((house) => {
+    if (maxPrice && house.pricePerNight > maxPrice) return false;
+    if (house.scareLevel < minScare) return false;
+    if (ghostType && !house.ghostTypes.includes(ghostType)) return false;
+    if (wifiRequired && !house.hasWifi) return false;
+    return true;
+  });
+
+  renderHouses(filtered);
+}
+
 function renderHouses(houses) {
   houseContainer.innerHTML = "";
+
+  if (houses.length === 0) {
+    houseContainer.innerHTML = '<p class="no-results">Inga hus matchar dina filter. Prova att ändra dina val.</p>';
+    return;
+  }
 
   for (const house of houses) {
     const card = document.createElement("article");
@@ -58,5 +80,14 @@ function renderHouses(houses) {
     houseContainer.appendChild(card);
   }
 }
+
+scareSlider.addEventListener("input", () => {
+  scareLabel.textContent = getScareText(Number(scareSlider.value));
+  filterHouses();
+});
+
+maxPriceInput.addEventListener("input", filterHouses);
+ghostTypeSelect.addEventListener("change", filterHouses);
+wifiCheckbox.addEventListener("change", filterHouses);
 
 init();
