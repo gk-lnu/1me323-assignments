@@ -1,15 +1,40 @@
 import { fetchHouses, getScareText, showError } from "./utils.js";
 
 const houseContainer = document.getElementById("house-list");
+const maxPriceInput = document.getElementById("max-price");
+const scareSlider = document.getElementById("scare-level");
+const scareLabel = document.getElementById("scare-label");
+const ghostTypeSelect = document.getElementById("ghost-type");
+const wifiCheckbox = document.getElementById("wifi-required");
 
 let allHouses = [];
 
 async function init() {
   try {
     allHouses = await fetchHouses();
+    populateGhostTypes();
     renderHouses(allHouses);
   } catch (error) {
     showError(houseContainer, "Kunde inte ladda husen. Försök igen senare.");
+  }
+}
+
+function populateGhostTypes() {
+  const types = [];
+  for (const house of allHouses) {
+    for (const type of house.ghostTypes) {
+      if (!types.includes(type)) {
+        types.push(type);
+      }
+    }
+  }
+  types.sort();
+
+  for (const type of types) {
+    const option = document.createElement("option");
+    option.value = type;
+    option.textContent = type;
+    ghostTypeSelect.appendChild(option);
   }
 }
 
