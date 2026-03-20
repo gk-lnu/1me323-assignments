@@ -224,3 +224,31 @@ footer {
   border-radius: 8px;
   margin-bottom: 1rem;
 }
+
+#house-detail h1 {
+  margin-bottom: 0.25rem;
+}
+
+#house-detail .location {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+#house-detail .description {
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.info-grid p {
+  font-size: 0.9rem;
+}
