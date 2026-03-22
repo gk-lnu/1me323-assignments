@@ -29,6 +29,7 @@ async function init() {
 
     renderHouse(house);
     setupBooking(house);
+    fetchWeather(house.coordinates);
   } catch (error) {
     showError(houseDetail, "Något gick fel vid laddning av husdata.");
     bookingSection.style.display = "none";
@@ -52,6 +53,39 @@ function renderHouse(house) {
       '<p><strong>Spöktyper:</strong> ' + ghostList + '</p>' +
       '<p><strong>WiFi:</strong> ' + wifiText + '</p>' +
     '</div>';
+}
+
+async function fetchWeather(coordinates) {
+  try {
+    const url = "https://api.open-meteo.com/v1/forecast?latitude=" + coordinates.lat + "&longitude=" + coordinates.lng + "&current=temperature_2m,wind_speed_10m&daily=temperature_2m_max,temperature_2m_min&timezone=auto&forecast_days=3";
+
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error("Kunde inte hämta väderdata");
+    }
+
+    const data = await response.json();
+    renderWeather(data);
+  } catch (error) {
+    weatherSection.innerHTML = '<h2>Väderprognos</h2><p class="error-message">Kunde inte ladda väderdata.</p>';
+  }
+}
+
+function renderWeather(data) {
+  const current = data.current;
+  const daily = data.daily;
+
+  let forecastHTML = "";
+  for (let i = 0; i < daily.time.length; i++) {
+    forecastHTML += '<div class="forecast-day">' +
+      '<p class="date">' + daily.time[i] + '</p>' +
+      '<p>' + daily.temperature_2m_max[i] + '° / ' + daily.temperature_2m_min[i] + '°</p>' +
+      '</div>';
+  }
+
+  weatherSection.innerHTML = '<h2>Väderprognos</h2>' +
+    '<p>Just nu: ' + current.temperature_2m + '°C, vind ' + current.wind_speed_10m + ' km/h</p>' +
+    '<div class="forecast-grid">' + forecastHTML + '</div>';
 }
 
 function setupBooking(house) {
