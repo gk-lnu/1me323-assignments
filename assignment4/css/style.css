@@ -279,7 +279,7 @@ footer {
 .booking-form input[type="number"],
 .booking-form input[type="text"] {
   width: 100%;
-  max-width: 280px;
+  max-width: 300px;
   padding: 0.5rem;
   border: 2px solid #ddd;
   border-radius: 6px;
