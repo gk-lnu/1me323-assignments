@@ -87,7 +87,7 @@ main > h1 {
 
 .card-content h2 {
   font-size: 1.2rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.25rem;
 }
 
 .card-content .location {
@@ -99,7 +99,7 @@ main > h1 {
 .card-content .price {
   font-weight: 700;
   color: #1a1a2e;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.25rem;
 }
 
 .card-content .scare {
@@ -177,7 +177,7 @@ footer {
 .filter-field label {
   display: block;
   font-size: 0.85rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.25rem;
   font-weight: 600;
 }
 
@@ -226,7 +226,7 @@ footer {
 }
 
 #house-detail h1 {
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.25rem;
 }
 
 #house-detail .location {
@@ -272,7 +272,7 @@ footer {
   display: block;
   font-weight: 600;
   font-size: 0.85rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.25rem;
 }
 
 .booking-form input[type="date"],
@@ -333,7 +333,7 @@ footer {
 }
 
 .confirmation p {
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.25rem;
 }
 
 #weather-section {
@@ -363,5 +363,5 @@ footer {
 .forecast-day .date {
   font-size: 0.8rem;
   color: #666;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.25rem;
 }
