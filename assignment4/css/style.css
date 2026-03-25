@@ -288,7 +288,7 @@ footer {
 }
 
 .booking-form fieldset {
-  border: 2px solid #e0e0e0;
+  border: 1px solid #ddd;
   border-radius: 6px;
   padding: 1rem;
   margin-bottom: 1rem;
