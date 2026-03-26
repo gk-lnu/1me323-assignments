@@ -35,7 +35,7 @@ nav .logo {
 nav ul {
   list-style: none;
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 nav ul a {
@@ -60,7 +60,7 @@ main > h1 {
 .house-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .house-card {
@@ -170,7 +170,7 @@ footer {
 .filter-form {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  gap: 1.5rem;
   align-items: end;
 }
 
@@ -349,7 +349,7 @@ footer {
 
 .forecast-grid {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   margin-top: 1rem;
 }
 
