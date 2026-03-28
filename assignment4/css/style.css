@@ -67,7 +67,7 @@ main > h1 {
   background: white;
   border-radius: 6px;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   transition: transform 0.2s;
 }
 
@@ -156,7 +156,7 @@ footer {
   padding: 2rem;
   border-radius: 6px;
   margin-bottom: 1.5rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .filter-section h2 {
