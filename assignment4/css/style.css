@@ -350,7 +350,7 @@ footer {
 .forecast-grid {
   display: flex;
   gap: 1.5rem;
-  margin-top: 0.75rem;
+  margin-top: 1rem;
 }
 
 .forecast-day {
