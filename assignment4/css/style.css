@@ -27,7 +27,7 @@ nav {
 
 nav .logo {
   font-size: 1.4rem;
-  font-weight: 600;
+  font-weight: 700;
   color: white;
   text-decoration: none;
 }
@@ -97,7 +97,7 @@ main > h1 {
 }
 
 .card-content .price {
-  font-weight: 600;
+  font-weight: 700;
   color: #1a1a2e;
   margin-bottom: 0.25rem;
 }
@@ -135,7 +135,7 @@ main > h1 {
 
 .error-message {
   color: #c0392b;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 0.75rem;
 }
 
@@ -178,7 +178,7 @@ footer {
   display: block;
   font-size: 0.85rem;
   margin-bottom: 0.25rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .filter-field input[type="number"],
@@ -270,7 +270,7 @@ footer {
 
 .booking-form label {
   display: block;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.85rem;
   margin-bottom: 0.25rem;
 }
@@ -295,7 +295,7 @@ footer {
 }
 
 .booking-form legend {
-  font-weight: 600;
+  font-weight: 700;
   padding: 0 0.5rem;
 }
 
