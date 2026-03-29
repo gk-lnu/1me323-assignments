@@ -16,5 +16,11 @@ export const assignments = [
     title: "Uppgift 3",
     description: "Turneringsgenerator med bracket-system.",
     link: "assignment3/index.html"
+  },
+  {
+    id: "assignment4",
+    title: "Uppgift 4",
+    description: "Spökhusbyrån — hemsökta hus med filtrering och bokning.",
+    link: "assignment4/index.html"
   }
 ];
